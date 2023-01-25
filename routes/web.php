@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\togaController;
 use App\Http\Controllers\produksi_togaController;
-
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,7 @@ use App\Http\Controllers\produksi_togaController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+//Route Home (Beranda)
 Route::get('/', function () {
     return view('home',[
         "title" => "Home",
@@ -25,6 +26,7 @@ Route::get('/', function () {
     ]);
 });
 
+//Route KWT
 Route::get('/kwt', function () {
     return view('kwt',[
         "title" => "KWT",
@@ -32,6 +34,19 @@ Route::get('/kwt', function () {
     ]);
 });
 
+//Route TOGA
 Route::get('/toga', [togaController::class, 'index']);
+
+//Route Produksi TOGA
 Route::get('/produksi_toga', [produksi_togaController::class, 'index']);
-// Route::get('/', [LoginController::class, 'index']);
+
+//Route Login
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+
+//Autentikasi Login
+Route::post('/logout', [LoginController::class, 'authenticate']);
+
+//Route Logout
+Route::post('/logout', [LoginController::class, 'logout']);
+
+
