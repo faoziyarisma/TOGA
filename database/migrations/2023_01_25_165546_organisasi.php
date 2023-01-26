@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('togas', function (Blueprint $table) {
+        Schema::create('organisasi', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image')->nullable();
-            $table->text('excerpt')->nullable();
-            $table->text('body')->nullable();
+            $table->string('jabatan');
+            $table->string('alamat')->nullable();
+            // $table->text('body')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('togas');
+        //
     }
 };
