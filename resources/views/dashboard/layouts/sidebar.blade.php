@@ -8,32 +8,26 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/posts') ? 'active' : '' }}" href="/dashboard/posts">
-            <span data-feather="file-text"></span>
+          <a class="nav-link {{ Request::is('dashboard/organisasi_kwt') ? 'active' : '' }}" href="/dashboard/posts">
+            <span data-feather="users"></span>
             Organisasi KWT
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/posts') ? 'active' : '' }}" href="/dashboard/posts">
-              <span data-feather="file-text"></span>
-              Organisasi KWT
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/posts') ? 'active' : '' }}" href="/dashboard/posts">
-              <span data-feather="file-text"></span>
+            <a class="nav-link {{ Request::is('dashboard/event_kwt') ? 'active' : '' }}" href="/dashboard/posts">
+              <span data-feather="calendar"></span>
               Event KWT
             </a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/posts') ? 'active' : '' }}" href="/dashboard/posts">
-              <span data-feather="file-text"></span>
+            <a class="nav-link {{ Request::is('dashboard/toga') ? 'active' : '' }}" href="/dashboard/posts">
+              <span data-feather="slack"></span>
               Toga
             </a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/posts') ? 'active' : '' }}" href="/dashboard/posts">
-              <span data-feather="file-text"></span>
+            <a class="nav-link {{ Request::is('dashboard/produksi_toga') ? 'active' : '' }}" href="/dashboard/posts">
+              <span data-feather="package"></span>
               Produksi Toga
             </a>
         </li> 
@@ -63,9 +57,9 @@
         </li> --}}
       </ul>
 
-      @can('admin')
+      {{-- @can('admin')
         
-        <h6 class="sidebar-heading d-flex justify-contetnt-between align-items-center px-3 mt-4 mb-1 text-muted">
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
           <span>Administrator</span>
         </h6>
         <ul class="nav flex-column">
@@ -76,7 +70,7 @@
             </a>
           </li>
         </ul>
-      @endcan
+      @endcan --}}
 
       {{-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
         <span>Saved reports</span>

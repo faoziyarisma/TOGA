@@ -44,9 +44,13 @@ Route::get('/produksi_toga', [produksi_togaController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
 //Autentikasi Login
-Route::post('/logout', [LoginController::class, 'authenticate']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 
 //Route Logout
 Route::post('/logout', [LoginController::class, 'logout']);
 
+// Route Dashboard
+Route::get('/dashboard',function(){
+    return view('dashboard.index');
 
+})->middleware('auth');
