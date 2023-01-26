@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('togas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->text('excerpt')->nullable();
             $table->text('body')->nullable();
             $table->timestamps();

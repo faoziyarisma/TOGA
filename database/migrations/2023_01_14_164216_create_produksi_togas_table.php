@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('produksi_togas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image');
             $table->text('deskripsi');
+            $table->text('excerpt')->nullable();
             $table->text('alat_bahan')->nullable();
             $table->text('proses')->nullable();
             $table->text('reaksi_kimia')->nullable();
