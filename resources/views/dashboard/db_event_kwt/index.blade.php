@@ -25,10 +25,18 @@
             </div>
             <div class="card-body">
                 <div class="row">
+                    <div class="col-md-4">
+                        <form action="/dashboard/kwt_event">
+                            <div class="input-group my-2">
+                                <input type="text" class="form-control" placeholder="Nama Kegiatan" name="search_name" value="{{ request('search_name') }}">
+                                <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari Kegiatan</button>
+                            </div>
+                        </form>
+                    </div>
                     <div class="col-md-4 ms-auto">
                         <form action="/dashboard/kwt_event">
                             <div class="input-group my-2">
-                                <input type="date" class="form-control" placeholder="Tanggal bon" name="search" value="{{ request('search') }}">
+                                <input type="date" class="form-control" placeholder="Tanggal Kegiatan" name="search_date" value="{{ request('search_date') }}">
                                 <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari Kegiatan</button>
                             </div>
                         </form>
