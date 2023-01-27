@@ -8,25 +8,25 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/organisasi_kwt') ? 'active' : '' }}" href="/dashboard/posts">
+          <a class="nav-link {{ Request::is('dashboard/kwt_organisasi') ? 'active' : '' }}" href="/dashboard/kwt_organisasi">
             <span data-feather="users"></span>
             Organisasi KWT
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/event_kwt') ? 'active' : '' }}" href="/dashboard/posts">
+            <a class="nav-link {{ Request::is('dashboard/kwt_event') ? 'active' : '' }}" href="/dashboard/kwt_event">
               <span data-feather="calendar"></span>
               Event KWT
             </a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/toga') ? 'active' : '' }}" href="/dashboard/posts">
+            <a class="nav-link {{ Request::is('dashboard/toga') ? 'active' : '' }}" href="/dashboard/toga">
               <span data-feather="slack"></span>
               Toga
             </a>
         </li> 
         <li class="nav-item">
-            <a class="nav-link {{ Request::is('dashboard/produksi_toga') ? 'active' : '' }}" href="/dashboard/posts">
+            <a class="nav-link {{ Request::is('dashboard/produksi_toga') ? 'active' : '' }}" href="/dashboard/produksi_toga">
               <span data-feather="package"></span>
               Produksi Toga
             </a>

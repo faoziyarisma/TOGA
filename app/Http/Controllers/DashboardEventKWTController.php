@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\toga;
+use App\Models\kwt_event;
 use Illuminate\Http\Request;
 
-class DashboardtogaController extends Controller
+class DashboardEventKWTController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,11 @@ class DashboardtogaController extends Controller
      */
     public function index()
     {
-        $items = toga::latest()->paginate(10);
-        return view('dashboard.db_toga.index', [
-            'title' => 'TOGA',
-            'active' => 'dashboard/toga',
+        // $active => kwt_event;
+        $items = kwt_event::latest()->paginate(10);
+        return view('dashboard.db_event_kwt.index', [
+            'title' => 'Event KWT',
+            'active' => 'dashboard/kwt_event',
             'items' => $items,
         ]);
     }
@@ -46,10 +47,10 @@ class DashboardtogaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\toga  $toga
+     * @param  \App\Models\kwt_event  $kwt_event
      * @return \Illuminate\Http\Response
      */
-    public function show(toga $toga)
+    public function show(kwt_event $kwt_event)
     {
         //
     }
@@ -57,10 +58,10 @@ class DashboardtogaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\toga  $toga
+     * @param  \App\Models\kwt_event  $kwt_event
      * @return \Illuminate\Http\Response
      */
-    public function edit(toga $toga)
+    public function edit(kwt_event $kwt_event)
     {
         //
     }
@@ -69,10 +70,10 @@ class DashboardtogaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\toga  $toga
+     * @param  \App\Models\kwt_event  $kwt_event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, toga $toga)
+    public function update(Request $request, kwt_event $kwt_event)
     {
         //
     }
@@ -80,10 +81,10 @@ class DashboardtogaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\toga  $toga
+     * @param  \App\Models\kwt_event  $kwt_event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(toga $toga)
+    public function destroy(kwt_event $kwt_event)
     {
         //
     }

@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\DashboardEventKWTController;
+use App\Http\Controllers\DashboardOrganisasiKWTController;
+use App\Http\Controllers\Dashboardproduksi_togaController;
+use App\Http\Controllers\DashboardtogaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\togaController;
 use App\Http\Controllers\produksi_togaController;
@@ -55,3 +59,14 @@ Route::get('/dashboard',function(){
 
 })->middleware('auth');
 
+// Route Dashboard Organisasi KWT
+Route::resource('/dashboard/kwt_organisasi', DashboardOrganisasiKWTController::class)->middleware('auth');
+
+//Route Dashboard Event KWT
+Route::resource('/dashboard/kwt_event', DashboardEventKWTController::class)->middleware('auth');
+
+// Route Dashboard TOGA
+Route::resource('/dashboard/toga', DashboardtogaController::class)->middleware('auth');
+
+// Route Dashboard Produksi TOGA
+Route::resource('/dashboard/produksi_toga', Dashboardproduksi_togaController::class)->middleware('auth');

@@ -14,7 +14,12 @@ class Dashboardproduksi_togaController extends Controller
      */
     public function index()
     {
-        //
+        $items = produksi_toga::latest()->paginate(10);
+        return view('dashboard.db_produksi_toga.index', [
+            'title' => 'Produksi TOGA',
+            'active' => 'dashboard/produksi_toga',
+            'items' => $items,
+        ]);
     }
 
     /**

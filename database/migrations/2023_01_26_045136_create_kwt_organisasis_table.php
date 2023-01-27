@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('kwt_organisasis', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('jabatan');
+            $table->string('jabatan_id');
             $table->string('alamat')->nullable();
             // $table->text('body')->nullable();
             $table->timestamps();

@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class produksi_toga extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 }

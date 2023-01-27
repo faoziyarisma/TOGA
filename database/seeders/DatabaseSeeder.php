@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\User;
+use App\Models\jabatan;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -27,6 +28,34 @@ class DatabaseSeeder extends Seeder
             'name' => 'Abil',
             'email' => 'paquita@gmail.com',
             'password' => bcrypt('abil_123')
+        ]);
+
+        jabatan::create([
+            'name' => 'Ketua'
+        ]);
+
+        jabatan::create([
+            'name' => 'Sekretaris'
+        ]);
+
+        jabatan::create([
+            'name' => 'Bendahara'
+        ]);
+
+        jabatan::create([
+            'name' => 'Seksi Pembibitan'
+        ]);
+
+        jabatan::create([
+            'name' => 'Seksi Pemasaran'
+        ]);
+
+        jabatan::create([
+            'name' => 'Seksi Pengelolaan'
+        ]);
+
+        jabatan::create([
+            'name' => 'Anggota'
         ]);
     }
 }
