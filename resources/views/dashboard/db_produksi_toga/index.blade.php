@@ -25,10 +25,10 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-4 ms-auto">
+                    <div class="col-md-5 ms-auto">
                         <form action="/dashboard/produksi_toga">
                             <div class="input-group my-2">
-                                <input type="date" class="form-control" placeholder="Tanggal bon" name="search" value="{{ request('search') }}">
+                                <input type="text" class="form-control" placeholder="Nama Produksi TOGA" name="search" value="{{ request('search') }}">
                                 <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari Produksi TOGA</button>
                             </div>
                         </form>

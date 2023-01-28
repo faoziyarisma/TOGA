@@ -59,7 +59,14 @@
                                     <tr>
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->title }}</td>
-                                        <td>{{ $item->waktu }}</td>
+                                        <td>
+                                            @php
+                                            $periode = $item->waktu;
+                                            $periode2 = App\Http\Controllers\DashboardEventKWTController::convert_date($periode);
+                                            echo $periode2;
+                                            @endphp
+                                            {{-- {{ $item->waktu }} --}}
+                                        </td>
                                         <td>
                                             <a href="/dashboard/kwt_event/{{ $item->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
                                             <a href="/dashboard/kwt_event/{{ $item->id }}/edit" class="badge bg-warning"><span data-feather="edit-2"></span></a>  

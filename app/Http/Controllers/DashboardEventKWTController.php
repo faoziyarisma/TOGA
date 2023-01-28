@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 class DashboardEventKWTController extends Controller
 {
@@ -164,5 +165,10 @@ class DashboardEventKWTController extends Controller
         Storage::delete($kwt_event->image);
         kwt_event::destroy($kwt_event->id);
         return redirect('dashboard/kwt_event')->with('success', 'Data kegiatan berhasil dihapus!');
+    }
+
+    public static function convert_date(string $date){
+        $conv_date = Carbon::parse($date)->locale('id')->isoFormat('LL');
+        return $conv_date;
     }
 }

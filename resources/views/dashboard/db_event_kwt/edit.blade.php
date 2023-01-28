@@ -72,7 +72,7 @@
                             <p class="my-0 mx-3">Deskripsi</p>
                             <p class="small text-danger mb-2 mx-3">*required</p>
                         </div>
-                        <div>
+                        <div class="mx-3">
                             @error('body')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror

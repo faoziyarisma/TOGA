@@ -31,7 +31,13 @@
                         <p class="my-0 mx-3">Waktu</p>
                     </div>
                     <div class="col-md-7 col-sm-12">
-                        <p class="my-0 mx-3">{{ $items -> waktu }}</p>
+                        <p class="my-0 mx-3">
+                            @php
+                                $periode = $items->waktu;
+                                $periode2 = App\Http\Controllers\DashboardEventKWTController::convert_date($periode);
+                                echo $periode2;
+                            @endphp
+                        </p>
                     </div>
                 </div>
                 <div class="row mb-3">
