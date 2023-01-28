@@ -6,11 +6,11 @@
     <div class="container-fluid isian-db table-style">
         {{-- heading --}}
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 my-3 border-bottom">
-            <h4>Tambah Kegiatan KWT</h4>
+            <h4>Detail Kegiatan KWT</h4>
         </div>
 
         {{-- deskripsi --}}
-        <p class="mb-3">Menambahkan Kegiatan KWT Desa Gupit.</p>
+        <p class="mb-3">Menampilkan detail kegiatan KWT desa Gupit.</p>
 
         {{-- form --}}
         <div class="card shadow my-4 w-75">
@@ -54,6 +54,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="mt-2 mb-5 mx-4">
+        <a href="/dashboard/kwt_event" class="btn btn-outline-info mt-3 mb-5 small text-dark rounded"
+        id="tombol2">Kembali</a>
     </div>
 @endsection
 

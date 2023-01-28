@@ -89,6 +89,10 @@
             </div>
         </div>
     </div>
+    <div class="mt-2 mb-5 mx-4">
+        <a href="/dashboard/kwt_event" class="btn btn-outline-info mt-3 mb-5 small text-dark rounded"
+        id="tombol2">Kembali</a>
+    </div>
 @endsection
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"

@@ -28,7 +28,7 @@
                     <div class="col-md-4 ms-auto">
                         <form action="/dashboard/toga">
                             <div class="input-group my-2">
-                                <input type="date" class="form-control" placeholder="Tanggal bon" name="search" value="{{ request('search') }}">
+                                <input type="text" class="form-control" placeholder="Nama TOGA" name="search" value="{{ request('search') }}">
                                 <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari TOGA</button>
                             </div>
                         </form>

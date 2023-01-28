@@ -84,6 +84,7 @@ class DashboardEventKWTController extends Controller
         if($request->file('image')){
             $validatedData['image'] = $request->file('image')->store('event-images');
         }
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
         kwt_event::create($validatedData);
         return redirect('dashboard/kwt_event')->with('success', 'Sukses menambahkan data kegiatan!');
