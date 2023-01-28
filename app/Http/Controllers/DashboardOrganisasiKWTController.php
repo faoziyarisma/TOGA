@@ -24,7 +24,7 @@ class DashboardOrganisasiKWTController extends Controller
             // dd($items);
             $items->appends(request()->all());
             return view('dashboard.db_organisasi_kwt.index',[
-                'title' => 'Organisasi KWT',
+                "title" => "Organisasi KWT",
                 // 'active' => 'dashboard/kwt_organisasi',
                 'items' => $items,
             ]);
@@ -80,6 +80,7 @@ class DashboardOrganisasiKWTController extends Controller
     public function show(kwt_organisasi $kwt_organisasi)
     {
         return view('dashboard.db_organisasi_kwt.show',[
+            'title' => 'Organisasi KWT',
             'items' => $kwt_organisasi
         ]);
     }
@@ -93,6 +94,7 @@ class DashboardOrganisasiKWTController extends Controller
     public function edit(kwt_organisasi $kwt_organisasi)
     {
         return view('dashboard.db_organisasi_kwt.edit',[
+            'title' => 'Organisasi KWT',
             'items' => $kwt_organisasi,
             'jabatans' => jabatan::all()
         ]);

@@ -98,6 +98,7 @@ class DashboardEventKWTController extends Controller
     public function show(kwt_event $kwt_event)
     {
         return view('dashboard.db_event_kwt.show',[
+            'title' => 'Event KWT',
             'items' => $kwt_event
         ]);
     }
@@ -111,6 +112,7 @@ class DashboardEventKWTController extends Controller
     public function edit(kwt_event $kwt_event)
     {
         return view('dashboard.db_event_kwt.edit',[
+            'title' => 'Event KWT',
             'items' => $kwt_event,
         ]);
     }
