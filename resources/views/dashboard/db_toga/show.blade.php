@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="mt-2 mb-5 mx-4">
+    <div class="mt-2 mb-5 mx-4 isian-db">
         <a href="/dashboard/toga" class="btn btn-outline-info mt-3 mb-5 small text-dark rounded"
         id="tombol2">Kembali</a>
     </div>

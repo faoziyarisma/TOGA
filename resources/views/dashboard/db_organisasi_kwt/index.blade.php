@@ -3,7 +3,7 @@
 @section('container')
     {{-- content --}}
     <div class="container-fluid isian-db">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 my-3 border-bottom">
+        <div class="d-flex isian-db-2 justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 my-3 border-bottom">
             <h4>Daftar Anggota KWT</h4>
         </div>
         
@@ -20,7 +20,7 @@
 
         {{-- Daftar kwt_organisasi terdaftar --}}
         <div class="card shadow mb-4">
-            <div class="card-header py-2">
+            <div class="isian-db-2 card-header py-2">
                 <h6 class="my-2 table-name">Anggota KWT Gupit</h6>
             </div>
             <div class="card-body">
