@@ -51,7 +51,7 @@
                                     <tr>
                                         <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
-                                        <td>{{ $item->latin_name }}</td>
+                                        <td><i>{{ $item->latin_name }}</i></td>
                                         <td>
                                             <a href="/dashboard/toga/{{ $item->id }}" class="badge bg-info"><span data-feather="eye"></span></a>
                                             <a href="/dashboard/toga/{{ $item->id }}/edit" class="badge bg-warning"><span data-feather="edit-2"></span></a>  

@@ -31,7 +31,7 @@
                         <p class="my-0 mx-3">Nama Latin</p>
                     </div>
                     <div class="col-md-7 col-sm-12">
-                        <p class="my-0 mx-3">{{ $items -> latin_name }}</p>
+                        <i><p class="my-0 mx-3">{{ $items -> latin_name }}</p></i>
                     </div>
                 </div>
                 <div class="row mb-3">
