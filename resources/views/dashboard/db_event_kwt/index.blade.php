@@ -79,7 +79,7 @@
                                     </tr>
                                 @endforeach
                             @else
-                                <tr><td colspan="6" style="text-align:center">Data Kegiatan tidak ditemukan!</td></tr>
+                                <tr><td colspan="6" style="text-align:center">Data kegiatan tidak ditemukan.</td></tr>
                             @endif
                         </tbody>
                     </table>

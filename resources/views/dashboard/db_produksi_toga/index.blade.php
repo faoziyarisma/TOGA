@@ -64,7 +64,7 @@
                                     </tr>
                                 @endforeach
                             @else
-                                <tr><td colspan="6" style="text-align:center">Data Produksi TOGA tidak ditemukan!</td></tr>
+                                <tr><td colspan="6" style="text-align:center">Data produksi TOGA tidak ditemukan.</td></tr>
                             @endif
                         </tbody>
                     </table>
