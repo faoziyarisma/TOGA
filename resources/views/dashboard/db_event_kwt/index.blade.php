@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <a href="/dashboard/kwt_event/create" class="btn btn-info text-dark py-2 px-2 rounded mb-4">+ Tambah Kegiatan</a>
+        <a href="/dashboard/kwt_event/create" class="btn btn-outline-success border-2 py-2 px-2 rounded mb-4 collapsible">+ Tambah Kegiatan</a>
 
         {{-- Daftar kwt_event terdaftar --}}
         <div class="card shadow mb-4">
@@ -28,16 +28,16 @@
                     <div class="col-md-4">
                         <form action="/dashboard/kwt_event">
                             <div class="input-group my-2">
-                                <input type="text" class="form-control" placeholder="Nama Kegiatan" name="search_name" value="{{ request('search_name') }}">
-                                <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari Kegiatan</button>
+                                <input type="text" class="form-control border-2 collapsible1" placeholder="Nama Kegiatan" name="search_name" value="{{ request('search_name') }}">
+                                <button class="btn btn-success" type="submit" id="button-addon2">Cari Kegiatan</button>
                             </div>
                         </form>
                     </div>
                     <div class="col-md-4 ms-auto">
                         <form action="/dashboard/kwt_event">
                             <div class="input-group my-2">
-                                <input type="date" class="form-control" placeholder="Tanggal Kegiatan" name="search_date" value="{{ request('search_date') }}">
-                                <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari Kegiatan</button>
+                                <input type="date" class="form-control border-2 collapsible1" placeholder="Tanggal Kegiatan" name="search_date" value="{{ request('search_date') }}">
+                                <button class="btn btn-success" type="submit" id="button-addon2">Cari Kegiatan</button>
                             </div>
                         </form>
                     </div>

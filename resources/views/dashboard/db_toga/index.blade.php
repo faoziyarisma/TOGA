@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <a href="/dashboard/toga/create" class="btn btn-info text-dark py-2 px-2 rounded mb-4">+ Tambah TOGA</a>
+        <a href="/dashboard/toga/create" class="btn btn-outline-success border-2 py-2 px-2 rounded mb-4 collapsible">+ Tambah TOGA</a>
 
         {{-- Daftar toga terdaftar --}}
         <div class="card shadow mb-4">
@@ -28,8 +28,8 @@
                     <div class="col-md-4 ms-auto">
                         <form action="/dashboard/toga">
                             <div class="input-group my-2">
-                                <input type="text" class="form-control" placeholder="Nama TOGA" name="search" value="{{ request('search') }}">
-                                <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari TOGA</button>
+                                <input type="text" class="form-control border-2 collapsible1" placeholder="Nama TOGA" name="search" value="{{ request('search') }}">
+                                <button class="btn btn-success" type="submit" id="button-addon2">Cari TOGA</button>
                             </div>
                         </form>
                     </div>
