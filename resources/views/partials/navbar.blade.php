@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #30704d;">
+    <div class="container isian-db">
       <a class="navbar-brand" href="/" style="font-weight: bold;">TOGA GUPIT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        {{-- <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link {{ ($active === "home") ? 'active' : ''}}" aria-current="page" href="/">Beranda</a>
           </li>
@@ -18,10 +18,7 @@
           <li class="nav-item">
             <a class="nav-link {{ ($active === "produksi_TOGA") ? 'active' : ''}}" href="/produksi_toga">Produksi TOGA</a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link {{ ($active === "kontak_info") ? 'active' : ''}}" href="/kontak_info">Kontak Info</a>
-          </li> --}}
-        </ul>
+        </ul> --}}
 
         
         <ul class="navbar-nav ms-auto">

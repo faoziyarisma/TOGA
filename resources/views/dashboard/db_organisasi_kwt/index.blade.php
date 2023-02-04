@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <a href="/dashboard/kwt_organisasi/create" class="btn btn-info text-dark py-2 px-2 rounded mb-4">+ Tambah Anggota</a>
+        <a href="/dashboard/kwt_organisasi/create" class="btn btn-outline-success border-2 py-2 px-2 rounded mb-4 collapsible">+ Tambah Anggota</a>
 
         {{-- Daftar kwt_organisasi terdaftar --}}
         <div class="card shadow mb-4">
@@ -28,8 +28,8 @@
                     <div class="col-md-4 ms-auto">
                         <form action="/dashboard/kwt_organisasi">
                             <div class="input-group my-2">
-                                <input type="text" class="form-control" placeholder="Nama Anggota" name="search" value="{{ request('search') }}">
-                                <button class="btn btn-info text-dark" type="submit" id="button-addon2">Cari Anggota</button>
+                                <input type="text" class="form-control border-2 collapsible1" placeholder="Nama Anggota" name="search" value="{{ request('search') }}">
+                                <button class="btn btn-success" type="submit" id="button-addon2">Cari Anggota</button>
                             </div>
                         </form>
                     </div>
