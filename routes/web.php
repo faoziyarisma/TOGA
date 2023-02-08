@@ -75,4 +75,4 @@ Route::resource('/dashboard/produksi_toga', Dashboardproduksi_togaController::cl
 
 // Front End
 //TOGA
-Route::get('/togas/{user:id}', [togaController::class, 'detail_toga']);
+Route::get('/togas/{toga:id}', [togaController::class, 'detail_toga']);

@@ -15,7 +15,12 @@ class togaController extends Controller
         ]);
     }
 
-    public function detail_toga(){
-
+    public function detail_toga(toga $toga){
+        // dd($toga);
+        return view('toga.detail',[
+            "title" => 'Tanaman TOGA',
+            "active" => 'TOGA',
+            "item" => $toga
+        ]);
     }
 }

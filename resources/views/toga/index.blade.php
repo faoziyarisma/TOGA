@@ -15,23 +15,20 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
             @foreach ($items as $item)
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        {{-- <div class="position-absolute bg-danger px-3 py-1 text-white"><a href="/posts?category={{ $item->category->slug }}" class="text-decoration-none text-light">{{ $item->category->name }}</a></div> --}}
-                        
-                        {{-- @if ($item->image)
-                            <img src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->category->name }}" class="img-fluid">
-                        @else
-                            <img src="https://source.unsplash.com/500x300/?{{ $item->category->name }}" class="card-img-top" alt="{{ $item->category->name }}">
-                        @endif --}}
-                        <img src="{{ asset('storage/'.$item->image) }}" alt="" class="img-fluid" width="500" height="300">
+                        <img src="{{ asset('storage/'.$item->image) }}" alt="" class="card-img-top img-fluid" width="350" height="200">
                         <div class="card-body">
                         <h5 class="card-title">{{ $item->name }}</h5>
                         <h5>Nama Latin: {{ $item->latin_name }}</h5>
-                        <p class="card-text">{{ $item->excerpt }}</p>
+                        <p class="card-text">
+                            <article>
+                                {!! $item->excerpt !!}
+                            </article>
+                        </p>
                         <a href="/togas/{{ $item->id }}" class="btn btn-primary">Read more</a>
                         </div>
                     </div>
