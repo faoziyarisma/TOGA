@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\toga;
 use Illuminate\Http\Request;
 
 class togaController extends Controller
@@ -10,7 +11,7 @@ class togaController extends Controller
         return view('toga.index',[
             "title" => "Tanaman TOGA",
             "active" => "toga",
-            
+            "items" => toga::latest()->paginate(6)
         ]);
     }
 

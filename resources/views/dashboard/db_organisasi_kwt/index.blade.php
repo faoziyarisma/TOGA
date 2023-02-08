@@ -70,7 +70,7 @@
                                     </tr>
                                 @endforeach
                             @else
-                                <tr><td colspan="6" style="text-align:center">Data anggota tidak ditemukan!</td></tr>
+                                <tr><td colspan="6" style="text-align:center">Data anggota tidak ditemukan.</td></tr>
                             @endif
                         </tbody>
                     </table>

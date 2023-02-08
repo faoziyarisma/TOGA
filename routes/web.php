@@ -72,3 +72,7 @@ Route::resource('/dashboard/toga', DashboardtogaController::class)->middleware('
 
 // Route Dashboard Produksi TOGA
 Route::resource('/dashboard/produksi_toga', Dashboardproduksi_togaController::class)->middleware('auth');
+
+// Front End
+//TOGA
+Route::get('/togas/{user:id}', [togaController::class, 'detail_toga']);

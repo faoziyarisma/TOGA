@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        {{-- <ul class="navbar-nav">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link {{ ($active === "home") ? 'active' : ''}}" aria-current="page" href="/">Beranda</a>
           </li>
@@ -18,7 +18,7 @@
           <li class="nav-item">
             <a class="nav-link {{ ($active === "produksi_TOGA") ? 'active' : ''}}" href="/produksi_toga">Produksi TOGA</a>
           </li>
-        </ul> --}}
+        </ul>
 
         
         <ul class="navbar-nav ms-auto">

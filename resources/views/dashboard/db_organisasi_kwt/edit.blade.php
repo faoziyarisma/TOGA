@@ -75,7 +75,7 @@
                     </div>
                     
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary text-white me-md-6 my-3" type="submit">Edit Data</button>
+                        <button class="btn btn-primary text-white me-md-6 my-3" type="submit">Simpan Data</button>
                     </div>
                 </form>
             </div>
