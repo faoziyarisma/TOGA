@@ -12,9 +12,11 @@ use App\Models\toga;
 class HomeController extends Controller
 {
     public function index(){
+        $items = kwt_event::latest()->paginate(2);
         return view('home',[
             "title" => "Home",
-            "active" => "home"
+            "active" => "home",
+            "items" => $items
         ]);
     }
 }

@@ -24,7 +24,7 @@
     
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     {{-- <link href="style.css" rel="stylesheet"> --}}
-    <title>TOGA GUPIT | {{ $title }}</title>
+    <title>KWT GUPIT | {{ $title }}</title>
   </head>
   <body>
     <!--footer-->

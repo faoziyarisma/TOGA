@@ -84,35 +84,85 @@
             <div class="carousel-title">
                 <p class="events">Events</p>
             </div>
+            @if ($items->count())
+            {{-- {% for post in site.categories[category_name] offset:3 limit:3 %} --}}
             <div class="carousel">
-                <div id="carouselEvent" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card-wrapper">
-                                <div class="card-events" data-bs-toggle="modal" data-bs-target="#cardEvent">
-                                    <img class="img-events img-fluid" alt="" src="img/event/panen-terong.jpg">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Panen Terong KWT</h6>
-                                        <a href="#" class="btn btn-outline-success btn-sm" >Lihat Detail</a>
-                                    </div>
-                                </div>
-                                <div class="card-events">
-                                    <img class="img-events img-fluid" alt="" src="img/event/pohon-kelapa.jpg">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Penanaman Pohon Kelapa</h6>
-                                        <a href="#" class="btn btn-outline-success btn-sm" >Lihat Detail</a>
-                                    </div>
-                                </div>
-                                <div class="card-events">
-                                    <img class="img-events img-fluid" alt="" src="img/event/perawatan-kebun.jpg">
-                                    <div class="card-body">
-                                        <h6 class="card-title">Perawatan Kebun KWT</h6>
-                                        <a href="#" class="btn btn-outline-success btn-sm" >Lihat Detail</a>
-                                    </div>
+              <div id="carouselEvent" class="carousel carousel-dark slide " data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  {{-- @if ($items->count()) --}}
+                  <div class="carousel-item active">
+                    <div class="card-wrapper">
+                      @foreach ($items as $item)
+                            <div class="card-events" data-bs-toggle="modal" data-bs-target="#cardEvent">
+                              <div class="text-center">
+                                <img class="img-events img-fluid center" alt="" src="{{ asset('storage/'.$item->image) }}">
+
+                              </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">{{ $item->title }}</h6>
+                                    <a href="#" class="btn btn-outline-success btn-sm" >Lihat Detail</a>
+                                    {{-- <div class="modal fade" id="cardEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog modal-dialog-centered">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                              <h5 class="modal-title text-center" id="exampleModalLabel">Panen Terong KWT</h5>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <img class="img-event img-fluid" alt="" src="img/event/panen-terong.jpg">
+                                                  <p class="text-center">
+                                                      Tanggal Pelaksanaan : <br> 10 September 2021<br>
+                                                      Deskripsi : <br>Pada hari Jumat, 10 September 2021 seluruh anggota KWT memanen hasil budidaya terung mereka.
+                                                      Hasil panen terung akan dibagikan kepada seluruh angggota KWT.
+                                                  </p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div> --}}
                                 </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
+                                  
+                                  {{-- <div class="card-events">
+                                      <img class="img-events img-fluid" alt="" src="img/event/pohon-kelapa.jpg">
+                                      <div class="card-body">
+                                          <h6 class="card-title">Penanaman Pohon Kelapa</h6>
+                                          <a href="#" class="btn btn-outline-success btn-sm" >Lihat Detail</a>
+                                          <div class="modal fade" id="cardEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title text-center" id="exampleModalLabel">Penanaman Pohon Kelapa</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img class="img-event img-fluid" alt="" src="img/event/panen-terong.jpg">
+                                                        <p class="text-center">
+                                                            Tanggal Pelaksanaan : <br> 8 Januari 2023<br>
+                                                            Deskripsi : <br>Pada hari Minggu, 8 Januari 2023 Kelompok Wanita Sari 
+                                                            Tumpaksari mendapatkan Bantuan dari Dinas Pertanian berupa benih kelapa genjah. 
+                                                            Penanaman ini dilakukan oleh semua anggota KWT dan mahasiswa KKN Undip Tim 1 2023.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div class="card-events">
+                                      <img class="img-events img-fluid" alt="" src="img/event/perawatan-kebun.jpg">
+                                      <div class="card-body">
+                                          <h6 class="card-title">Perawatan Kebun KWT</h6>
+                                          <a href="#" class="btn btn-outline-success btn-sm" >Lihat Detail</a>
+                                      </div>
+                                  </div> --}}
+                              {{-- </div> --}}
+                              @endforeach
+                          </div>
+                          
+                      @else
+                        <p class="text-center fs-4">Tidak ditemukan kegiatan KWT.</p>
+                      @endif
+                        {{-- <div class="carousel-item">
                             <div class="card-wrapper">
                                 <div class="card-events">
                                     <img class="img-events img-fluid" alt="" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
@@ -155,16 +205,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <button class="carousel-control-prev" data-bs-target="#carouselEvent" type="button" data-bs-slide="prev">
-                        <i class="bi bi-chevron-double-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                             <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                           </svg></i>
                     </button>
                     <button class="carousel-control-next" data-bs-target="#carouselEvent" type="button" data-bs-slide="next">
-                        <i class="bi bi-chevron-double-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
                             <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
                         </svg></i>
@@ -177,24 +227,9 @@
 <!-- END CAROUSEL EVENTS -->
 <!-- ======= END BERANDA ======= -->
 <!-- MODAL Event -->
-<div class="modal fade" id="cardEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title text-center" id="exampleModalLabel">Panen Terong KWT</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img class="img-event img-fluid" alt="" src="img/event/panen-terong.jpg">
-                <p class="text-center">
-                    Tanggal Pelaksanaan : <br> 10 September 2021<br>
-                    Deskripsi : <br>Pada hari Jumat, 10 September 2021 seluruh anggota KWT memanen hasil budidaya terung mereka.
-                    Hasil panen terung akan dibagikan kepada seluruh angggota KWT.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+
 
 <!-- ======= About Section ======= -->
 <section id="about" class="about">
@@ -223,7 +258,7 @@
                     <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
                 </ul> --}}
                 <button class="more btn bg-transparent">
-                    Lebih banyak . .  <i class="bi bi-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    Lebih banyak . .  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg></i>
                 </button>
@@ -320,13 +355,13 @@
                     </div>
                 </div>
                 <button class="carousel-control-prev" data-bs-target="#carouselToga" type="button" data-bs-slide="prev">
-                    <i class="bi bi-chevron-double-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                         <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                       </svg></i>
                 </button>
                 <button class="carousel-control-next" data-bs-target="#carouselToga" type="button" data-bs-slide="next">
-                    <i class="bi bi-chevron-double-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
                         <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg></i>
@@ -400,13 +435,13 @@
                                     <a href="#" class="btn btn-outline-success btn-sm" >Selengkapnya</a>
                                 </div>
                             </div>
-                            <div class="card-produk">
+                            {{-- <div class="card-produk">
                                 <img class="img-produk img-fluid" alt="" src="img/produk/jamu.jpg">
                                 <div class="card-body-produk">
                                     <h6 class="card-title">Jamu Kunyit Asam</h6>
                                     <a href="#" class="btn btn-outline-success btn-sm" >Selengkapnya</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -429,12 +464,12 @@
                                     <h6 class="card-title">Memproduksi Sambal Sereh</h6>
                                 </div>
                             </div>
-                            <div class="card-produk">
+                            {{-- <div class="card-produk">
                                 <img class="img-produk img-fluid" alt="" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
                                 <div class="card-body-produk">
                                     <h6 class="card-title">Memproduksi Sambal Sereh</h6>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -457,24 +492,24 @@
                                     <h6 class="card-title">Memproduksi Sambal Sereh</h6>
                                 </div>
                             </div>
-                            <div class="card-produk">
+                            {{-- <div class="card-produk">
                                 <img class="img-produk img-fluid" alt="" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
                                 <div class="card-body-produk">
                                     <h6 class="card-title">Memproduksi Sambal Sereh</h6>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
 
                 </div>
                 <button class="carousel-control-prev" data-bs-target="#carouselProduk" type="button" data-bs-slide="prev">
-                    <i class="bi bi-chevron-double-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                         <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                       </svg></i>
                 </button>
                 <button class="carousel-control-next" data-bs-target="#carouselProduk" type="button" data-bs-slide="next">
-                    <i class="bi bi-chevron-double-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
                         <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg></i>
