@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\togaController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardtogaController;
+use App\Http\Controllers\produksi_togaController;
 use App\Http\Controllers\DashboardEventKWTController;
 use App\Http\Controllers\DashboardOrganisasiKWTController;
 use App\Http\Controllers\Dashboardproduksi_togaController;
-use App\Http\Controllers\DashboardtogaController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\togaController;
-use App\Http\Controllers\produksi_togaController;
-use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,12 +24,13 @@ use App\Http\Controllers\LoginController;
 //     return view('welcome');
 // });
 //Route Home (Beranda)
-Route::get('/', function () {
-    return view('home',[
-        "title" => "Home",
-        "active" => "home"
-    ]);
-});
+// Route::get('/', function () {
+//     return view('home',[
+//         "title" => "Home",
+//         "active" => "home"
+//     ]);
+// });
+Route::get('/', [HomeController::class, 'index']);
 
 //Route KWT
 Route::get('/kwt', function () {

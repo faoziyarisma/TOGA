@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main2')
 
 @section('container')
 <div class="row justify-content-center isian-db">

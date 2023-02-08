@@ -20,15 +20,15 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,800;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Open+Sans:wght@800&family=Roboto+Slab&display=swap" rel="stylesheet">
     
-    {{-- <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet"> --}}
-    <link href="style.css" rel="stylesheet">
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
+    {{-- <link href="style.css" rel="stylesheet"> --}}
     <title>TOGA GUPIT | {{ $title }}</title>
   </head>
   <body>
     <!--footer-->
-    @include('partials.navbar')
+    @include('partials.navbar2')
 
     <!--content-->
     <div class="container mt-4">
@@ -36,7 +36,7 @@
     </div>
 
     <!--footer-->
-    {{-- @include('partials.footer') --}}
+    @include('partials.footer')
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
