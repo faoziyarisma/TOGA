@@ -1,0 +1,272 @@
+body {
+    position: relative;
+    margin: 0;
+    background-color: rgb(255, 255, 255, 1);
+    max-width: 100%;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-family: 'Alegreya Sans';
+    font-size: 32px;
+}
+
+/* JUMBOTRON */
+.jumbotron{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)), url(img/tomat.jpg);
+    background-size:cover;
+    height: 500px;
+}
+
+.jumbotron .main{
+    position: relative;
+    top: 250px;
+    color:rgb(255, 255, 255, 1);
+    text-align: center;
+    font-family: Alegreya Sans;
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 154px;
+}
+/* END JUMBOTRON */
+/* ======= END NAVBAR ======= */
+
+/* EVENTS */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: -25px;
+}
+.img-events{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-events{
+    margin: 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+    height: 270px;
+    width: 250px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+  .carousel-inner {
+    padding: 1em;
+}
+
+
+.carousel-control-prev {
+  background-color: #30704d;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-next {
+    background-color: #30704d;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-title p{
+    text-align: center;
+     color: #30704d;
+     font-family: alegreya sans;
+     font-size: 38px;
+     margin-top: -10px;
+ }
+
+
+.card-title{
+    color: #30704d;
+    text-align: center;
+}
+/* END EVENTS */
+
+/* ABOUT KWT */
+.section-header{
+    margin-top: 30pxpx;
+}
+.section-title{
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 115px;
+    color: #30704d;
+    margin-top: 110px;
+
+}
+.tentang{
+    color: #919991;
+}
+
+.more{
+    font-style: italic;
+    width: 150px;
+    height: 25px;
+    font-family: 'Alegreya Sans';
+    font-size: 18px;
+    color: #919991;
+    position: relative;
+    text-align: right;
+    left: 250px;
+}
+/* END ABOUT KWT */
+
+/* TOGA */
+.card-ingr {
+    margin: 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+    max-height: auto;
+    width: 250px;
+}
+
+.img-toga{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* END TOGA */
+
+/* PRODUK */
+.section-title-produksi{
+    margin-bottom: 100px;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 115px;
+    color: #30704d;
+
+}
+.card-produk {
+    margin: 0.5em;
+    box-shadow: 0 6px 8px 2px rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+    height: auto;
+    width: 250px;
+}
+.img-produk{
+    max-width: 100%;
+    max-height: 100%;
+}
+/* END PRODUK */
+
+/* Modal */
+.modal-title{
+    font-family: alegreya sans;
+    color:#30704d ;
+    justify-content: center;
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 1200px){
+    .navbar {
+        position: fixed;
+        width: 100%;
+        margin: 0 auto;
+        top: 0;
+        z-index: 3;
+    }
+
+    #nav-bg {
+        background: rgba(2, 80, 38, 0.52);
+        position: fixed;
+        height: 5em;
+        width: 100%;
+        top: 0;
+        z-index: -1;
+      }
+
+    .navbar-brand, .nav-link{
+        color: rgba(255, 255, 255, 0.67) !important;
+    }
+    .nav-link{
+        text-transform: uppercase;
+        font-family: 'Alegreya Sans';
+        margin-right: 70px;
+        margin-left: 10px;
+    }
+
+    .nav-link:hover::after{
+        content: '';
+        display: block;
+        border-bottom: 3px solid #30704d;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-top: -8px;
+    }
+
+    .jumbotron{
+        margin-top: -100px;
+    }
+
+    .jumbotron .main{
+        color:rgba(255, 255, 255, 0.94);
+        font-family: 'Alegreya Sans';
+        font-style: normal;
+        font-size: 75px;
+        line-height: 70px;
+        text-align: center;
+    }
+
+    .carousel-control-prev {
+        background-color: #30704d;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+      }
+
+    .carousel-control-next {
+          background-color: #30704d;
+          width: 5vh;
+          height: 5vh;
+          border-radius: 50%;
+          top: 50%;
+          right: 10%;
+          transform: translateY(-50%);
+    }
+
+    .carousel-title p{
+       text-align: center;
+        color: #30704d;
+        font-family: alegreya sans;
+        font-size: 38px;
+        margin-top: -10px;
+    }
+
+    .more{
+        font-style: italic;
+        width: 150px;
+        height: 25px;
+        font-family: 'Alegreya Sans';
+        font-size: 18px;
+        color: #919991;
+        position: relative;
+        text-align: right;
+        left:395px;
+    }
+
+
+
+}
+/* ======= END DESKTOP ======= */
+

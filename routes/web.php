@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\kwtController;
+use App\Http\Controllers\togaController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardtogaController;
+use App\Http\Controllers\produksi_togaController;
 use App\Http\Controllers\DashboardEventKWTController;
 use App\Http\Controllers\DashboardOrganisasiKWTController;
 use App\Http\Controllers\Dashboardproduksi_togaController;
-use App\Http\Controllers\DashboardtogaController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\togaController;
-use App\Http\Controllers\produksi_togaController;
-use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +38,13 @@ Route::get('/kwt', function () {
         "active" => "kwt"
     ]);
 });
+
+//Route KWT
+Route::get('/kwt', [kwtController::class, 'index']);
+
+Route::get('/kwt_event/{kwt_event:id}', [kwtController::class, 'detail_event']);
+
+Route::get('/organisasi_kwt', [kwtController::class, 'organisasi']);
 
 //Route TOGA
 Route::get('/toga', [togaController::class, 'index']);
@@ -76,3 +84,9 @@ Route::resource('/dashboard/produksi_toga', Dashboardproduksi_togaController::cl
 // Front End
 //TOGA
 Route::get('/togas/{toga:id}', [togaController::class, 'detail_toga']);
+
+//Produksi TOGA
+Route::get('/produksi_togas/{produksi_toga:id}', [produksi_togaController::class, 'detail_produksi_toga']);
+
+//Produksi TOGA
+// Route::get('/produksi_togas/{produksi_toga:id}', [produksi_togaController::class, 'detail_produksi_toga']);

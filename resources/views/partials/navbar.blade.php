@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(2, 80, 38, 0.52);">
+{{-- <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(2, 80, 38, 0.52);">
     <div class="container isian-db">
       <a class="navbar-brand" href="/" style="font-weight: bold;">KWT GUPIT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Welcome back, {{ auth()->user()->name }}
-                {{-- Welcome Back, Admin --}}
+                
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i> My Dashboard</a></li>
@@ -46,4 +46,28 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav> --}}
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar" style="background-color: rgba(2, 80, 38, 0.52);">
+    <div class="container">
+      <a class="navbar-brand" href="/" id="navCont">KWT Gupit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          {{-- <a class="nav-link active" href="#jumbotron">Beranda</a>
+          <a class="nav-link active" href="#about">Tentang KWT</a>
+          <a class="nav-link active" href="#ingredients">TOGA</a>
+          <a class="nav-link active" href="#produk">Produk TOGA</a>
+          <a class="nav-link active" href="#kontak">Kontak</a>
+          <a class="nav-link active" href="#">Login</a> --}}
+          <a class="nav-link active" href="/">Beranda</a>
+          <a class="nav-link active" href="/kwt">KWT</a>
+          <a class="nav-link active" href="/toga">TOGA</a>
+          <a class="nav-link active" href="/produksi_toga">Produk TOGA</a>
+          <a class="nav-link active" href="#kontak">Kontak</a>
+          <a class="nav-link active" href="/login">Login</a>
+        </div>
+      </div>
+    </div>
+</nav>

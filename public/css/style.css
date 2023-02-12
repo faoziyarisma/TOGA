@@ -34,8 +34,15 @@
 }
 
 .isian-db {
-    font-family: 'Alegreya Sans';
+    font-family: 'Merriweather', serif;
+    
   }
+
+.isian-db1 {
+    font-family: 'Merriweather', serif;
+    font-size: 10pt;
+}
+
 /* .fa{
     margin-right: 10px;
 }
@@ -49,6 +56,18 @@
 } */
 
 .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.card-img-top1 {
+    width: 100%;
+    height: 13vw;
+    object-fit: cover;
+}
+
+.card-img-top2 {
     width: 100%;
     height: 15vw;
     object-fit: cover;

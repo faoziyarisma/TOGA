@@ -20,16 +20,15 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,800;1,700&display=swap" rel="stylesheet">
-
-    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ URL::asset('style.css') }}">
+    
+    {{-- <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="style.css">
     <title>TOGA GUPIT | {{ $title }}</title>
   </head>
   <body>
     <!--footer-->
-    @include('partials.navbar')
+    @include('partials.navbar2')
 
     <!--content-->
     <div class="container mt-4">

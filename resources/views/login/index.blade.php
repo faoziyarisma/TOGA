@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
 @section('container')
+<div class="mt-5 mb-4">
+  <p style="color: white">Risma Manis</p>
+</div>
 <div class="row justify-content-center isian-db">
     <div class="col-md-4">
       @if (session()->has('success'))
